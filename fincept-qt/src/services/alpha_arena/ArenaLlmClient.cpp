@@ -9,6 +9,7 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QMap>
 #include <QNetworkReply>
 #include <QNetworkRequest>
 #include <QTimer>
@@ -131,6 +132,17 @@ void ArenaLlmClient::complete(const ArenaLlmRequest& req, std::function<void(Are
         nr.setRawHeader("User-Agent", "FinceptTerminal/4.0");
     } else if (!req.api_key.isEmpty()) {
         nr.setRawHeader("Authorization", ("Bearer " + req.api_key).toUtf8());
+    }
+
+    // Arena rounds are real billed traffic on a second code path — LlmService is not
+    // involved here — so they carry the same call attribution a chat request does.
+    // Fresh map per request, and empty unless base_url still resolves to the
+    // provider's own host.
+    const QMap<QString, QString> attribution = ProviderCatalog::attribution_headers(p, req.base_url);
+    for (auto it = attribution.constBegin(); it != attribution.constEnd(); ++it) {
+        const QByteArray name = it.key().toUtf8();
+        if (!nr.hasRawHeader(name)) // merge, never assign over an auth header set above
+            nr.setRawHeader(name, it.value().toUtf8());
     }
 
     const qint64 t0 = QDateTime::currentMSecsSinceEpoch();

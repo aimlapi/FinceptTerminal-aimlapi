@@ -24,7 +24,8 @@ inline bool provider_supports_streaming(const QString& provider) {
     return provider == "openai" || provider == "anthropic" || provider == "gemini" || provider == "google" ||
            provider == "groq" || provider == "deepseek" || provider == "openrouter" || provider == "minimax" ||
            provider == "kimi" || provider == "ollama" || provider == "xai" || provider == "fincept" ||
-           provider == "astraflow" || provider == "astraflow_cn" || provider == "aihubmix";
+           provider == "astraflow" || provider == "astraflow_cn" || provider == "aihubmix" ||
+           provider == "aimlapi";
 }
 
 inline bool provider_requires_api_key(const QString& provider) {
@@ -225,7 +226,8 @@ class LlmService : public QObject {
                                                                        const QMap<QString, QString>& headers);
 
     static QString get_models_url(const QString& provider, const QString& api_key, const QString& base_url);
-    static QMap<QString, QString> get_models_headers(const QString& provider, const QString& api_key);
+    static QMap<QString, QString> get_models_headers(const QString& provider, const QString& api_key,
+                                                     const QString& base_url = {});
     static QStringList parse_models_response(const QString& provider, const QByteArray& body);
 
     /// One parsed SSE delta. `is_reasoning` is true for chain-of-thought text

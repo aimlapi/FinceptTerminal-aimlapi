@@ -6,13 +6,14 @@
 
 #include <QHash>
 #include <QRegularExpression>
+#include <QUrl>
 
 namespace fincept::ai_chat {
 
 const QStringList& ProviderCatalog::known_providers() {
-    static const QStringList kProviders = {"openai",     "anthropic", "gemini",       "groq",    "deepseek",
-                                           "openrouter", "minimax",   "kimi",         "ollama",  "xai",
-                                           "fincept",    "astraflow", "astraflow_cn", "aihubmix"};
+    static const QStringList kProviders = {"openai",     "anthropic", "gemini",       "groq",     "deepseek",
+                                           "openrouter", "minimax",   "kimi",         "ollama",   "xai",
+                                           "fincept",    "astraflow", "astraflow_cn", "aihubmix", "aimlapi"};
     return kProviders;
 }
 
@@ -42,6 +43,7 @@ QString ProviderCatalog::display_name(const QString& provider_id) {
         {"astraflow", "AstraFlow"},
         {"astraflow_cn", "AstraFlow CN"},
         {"aihubmix", "AIHubMix"},
+        {"aimlapi", "aimlapi.com"},
     };
     const QString id = provider_id.toLower();
     const auto it = kNames.find(id);
@@ -85,7 +87,38 @@ QString ProviderCatalog::default_base_url(const QString& provider) {
         return "https://api.modelverse.cn/v1"; // Astraflow China endpoint (UCloud)
     if (p == "aihubmix")
         return "https://aihubmix.com/v1"; // AIHubMix — OpenAI-compatible aggregator (500+ models)
+    if (p == "aimlapi")
+        return "https://api.aimlapi.com/v1"; // aimlapi.com — OpenAI-compatible aggregator (350+ chat models)
     return {};
+}
+
+// Attribution headers for aimlapi.com, mirroring the OpenRouter block in
+// LlmService::get_headers (HTTP-Referer / X-Title identify the CALLING app, not
+// the gateway). Returned by value so callers get a fresh map they may merge
+// into — there is no shared mutable constant to clobber.
+//
+// Scoped to our own host on purpose: the Settings screen lets a user retype
+// base_url, and a provider row left on "aimlapi" while pointed at a proxy or a
+// different vendor must not carry the partner id with it.
+QMap<QString, QString> ProviderCatalog::attribution_headers(const QString& provider, const QString& base_url) {
+    QMap<QString, QString> h;
+    if (provider.toLower() != QLatin1String("aimlapi"))
+        return h;
+    QString effective = base_url.trimmed();
+    if (effective.isEmpty())
+        effective = default_base_url(QStringLiteral("aimlapi"));
+    // A scheme-less base_url ("api.aimlapi.com/v1") parses with an EMPTY host and
+    // would fail the check below, dropping attribution with no visible symptom.
+    // The Settings field accepts whatever is typed, so normalise before comparing.
+    if (!effective.contains(QLatin1String("://")))
+        effective.prepend(QLatin1String("https://"));
+    if (QUrl(effective).host().compare(QLatin1String("api.aimlapi.com"), Qt::CaseInsensitive) != 0)
+        return h;
+    h["HTTP-Referer"] = "https://fincept.in";
+    h["X-Title"] = "Fincept Terminal";
+    h["X-AIMLAPI-Partner-ID"] = "part_finceptterminal";
+    h["X-AIMLAPI-Source"] = "agent/finceptterminal";
+    return h;
 }
 
 QStringList ProviderCatalog::fallback_models(const QString& provider) {
@@ -161,6 +194,29 @@ QStringList ProviderCatalog::fallback_models(const QString& provider) {
                 "qwen-max",
                 "qwen-plus",
                 "grok-4"};
+    if (p == "aimlapi")
+        // aimlapi.com — OpenAI-compatible aggregator; 353 of its 936 catalogue rows are
+        // chat models, all reachable through one /v1/chat/completions endpoint. Ids keep
+        // a vendor prefix and are NOT interchangeable with the upstream vendor's own
+        // spelling. Starter list only; full list via the Fetch button.
+        //
+        // Every id below was verified on 2026-09-03 with a live POST to
+        // /v1/chat/completions (HTTP 200, non-empty choices[0]), not just looked up in
+        // /v1/models: that catalogue both omits ids that serve traffic and lists at least
+        // one that 404s, so membership alone is not evidence. Dotted spellings are used
+        // where the vendor publishes both (e.g. claude-sonnet-4.6, not -4-6).
+        return {"openai/gpt-5-5",
+                "openai/gpt-4o",
+                "openai/gpt-4o-mini",
+                "anthropic/claude-sonnet-4.6",
+                "anthropic/claude-opus-5",
+                "google/gemini-2.5-pro",
+                "google/gemini-2.5-flash",
+                "deepseek/deepseek-v4-flash",
+                "alibaba/qwen3-max",
+                "x-ai/grok-4-6",
+                "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+                "mistralai/mistral-large-2512"};
     return {};
 }
 
@@ -179,7 +235,7 @@ QString ProviderCatalog::brand_color(const QString& provider) {
         {"openai", "#10A37F"},       {"anthropic", "#D97757"},  {"gemini", "#4285F4"},  {"groq", "#F55036"},
         {"deepseek", "#4D6BFE"},     {"openrouter", "#8B5CF6"}, {"minimax", "#FF4D6A"}, {"kimi", "#16D9C4"},
         {"ollama", "#9CA3AF"},       {"xai", "#E7E9EA"},        {"fincept", "#FF8800"}, {"astraflow", "#38BDF8"},
-        {"astraflow_cn", "#38BDF8"}, {"aihubmix", "#F59E0B"},
+        {"astraflow_cn", "#38BDF8"}, {"aihubmix", "#F59E0B"},   {"aimlapi", "#1C38FF"},
     };
     const auto it = kColors.find(provider.toLower());
     if (it != kColors.end())

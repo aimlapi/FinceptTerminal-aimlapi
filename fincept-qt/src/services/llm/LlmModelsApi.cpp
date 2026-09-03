@@ -82,6 +82,8 @@ QString LlmService::get_models_url(const QString& provider, const QString& api_k
         return "https://api.moonshot.ai/v1/models";
     if (p == "aihubmix")
         return "https://aihubmix.com/v1/models"; // fallback if prefilled base_url was cleared
+    if (p == "aimlapi")
+        return "https://api.aimlapi.com/v1/models"; // fallback if prefilled base_url was cleared
     // fincept publishes no models endpoint — /research/llm/models is a 404, and
     // /research/llm/async takes no `model` field at all (the backend picks).
     // fetch_models() short-circuits to the known list before reaching here.
@@ -89,7 +91,8 @@ QString LlmService::get_models_url(const QString& provider, const QString& api_k
     return {};
 }
 
-QMap<QString, QString> LlmService::get_models_headers(const QString& provider, const QString& api_key) {
+QMap<QString, QString> LlmService::get_models_headers(const QString& provider, const QString& api_key,
+                                                      const QString& base_url) {
     QMap<QString, QString> h;
     const QString p = provider.toLower();
 
@@ -114,6 +117,15 @@ QMap<QString, QString> LlmService::get_models_headers(const QString& provider, c
         // OpenAI-compatible.
         if (!api_key.isEmpty())
             h["Authorization"] = "Bearer " + api_key;
+    }
+    // The Fetch button is a request we send too, so it carries the same attribution
+    // as a chat call. Merged, never assigned over — the auth header above wins any
+    // collision — and ProviderCatalog returns an empty map unless base_url still
+    // resolves to that provider's own host.
+    const QMap<QString, QString> attribution = ProviderCatalog::attribution_headers(p, base_url);
+    for (auto it = attribution.constBegin(); it != attribution.constEnd(); ++it) {
+        if (!h.contains(it.key()))
+            h.insert(it.key(), it.value());
     }
     return h;
 }
@@ -170,6 +182,27 @@ QStringList LlmService::parse_models_response(const QString& provider, const QBy
         }
         if (models.isEmpty())
             models = {"MiniMax-M2.7", "MiniMax-M2.7-highspeed", "MiniMax-M2.5"};
+    } else if (p == "aimlapi") {
+        // Same {"data":[{"id":...}]} envelope as everyone else, but the catalogue is
+        // one list for every modality: 936 rows, of which only 353 are chat models.
+        // Unfiltered, the model combo fills up with image/video/embedding/STT ids
+        // that answer /chat/completions with a 404. `type` carries the endpoint the
+        // row belongs to and is present in the default response, so the Fetch button
+        // does not need ?include=all (that flag adds pricing/capabilities/modalities
+        // and triples the payload to ~1.6 MB for fields the combo never reads).
+        //
+        // 71 ids appear on more than one row under different `type`s — the same id is
+        // both a chat model and, say, a /responses or /batches target. Filtering on
+        // `type` also de-duplicates those: the 353 chat rows carry 353 distinct ids.
+        QJsonArray arr = root["data"].toArray();
+        for (const auto& v : arr) {
+            QJsonObject m = v.toObject();
+            if (m["type"].toString() != QLatin1String("openai/chat-completions"))
+                continue;
+            QString id = m["id"].toString();
+            if (!id.isEmpty())
+                models.append(id);
+        }
     } else {
         // OpenAI-compatible: {"data": [{"id": ...}]}.
         QJsonArray arr = root["data"].toArray();
@@ -204,7 +237,7 @@ void LlmService::fetch_models(const QString& provider, const QString& api_key, c
 
     QNetworkRequest req{QUrl(url)};
     req.setAttribute(QNetworkRequest::RedirectPolicyAttribute, QNetworkRequest::NoLessSafeRedirectPolicy);
-    auto headers = get_models_headers(provider, api_key);
+    auto headers = get_models_headers(provider, api_key, base_url);
     for (auto it = headers.constBegin(); it != headers.constEnd(); ++it)
         req.setRawHeader(it.key().toUtf8(), it.value().toUtf8());
 
