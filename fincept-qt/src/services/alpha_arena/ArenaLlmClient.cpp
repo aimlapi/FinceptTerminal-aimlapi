@@ -95,6 +95,19 @@ ArenaLlmResult ArenaLlmClient::parse_response(const QString& provider, const QBy
         const auto u = o.value("usage").toObject();
         r.prompt_tokens = u.value("prompt_tokens").toInt();
         r.completion_tokens = u.value("completion_tokens").toInt();
+        // Reasoning tokens are billed but are NOT inside completion_tokens on every
+        // route. Measured on the same gateway, same request shape: gemini-2.5-pro
+        // answered a one-word reply with completion_tokens=1,
+        // completion_tokens_details.reasoning_tokens=57 and total_tokens=69, while
+        // gpt-5.5 and deepseek-v4 already fold reasoning into completion_tokens.
+        // ArenaStore::token_totals and the decision log both sum
+        // prompt_tokens + completion_tokens, so without this the arena silently
+        // under-reports a reasoning agent's usage by an order of magnitude.
+        // Trusting total_tokens for the shortfall is provider-agnostic and a no-op
+        // wherever the two already agree.
+        const int total = u.value("total_tokens").toInt();
+        if (total > r.prompt_tokens + r.completion_tokens)
+            r.completion_tokens = total - r.prompt_tokens;
     }
     if (r.content.isEmpty()) {
         r.error = "empty completion";
