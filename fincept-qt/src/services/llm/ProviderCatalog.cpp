@@ -120,7 +120,7 @@ QMap<QString, QString> ProviderCatalog::attribution_headers(const QString& provi
         return h;
     h["HTTP-Referer"] = "https://fincept.in";
     h["X-Title"] = "Fincept Terminal";
-    h["X-AIMLAPI-Partner-ID"] = "part_finceptterminal";
+    h["X-AIMLAPI-Partner-ID"] = "part_7BsLIBzelgOXobyArFlFtmup";
     h["X-AIMLAPI-Source"] = "agent/finceptterminal";
     return h;
 }
