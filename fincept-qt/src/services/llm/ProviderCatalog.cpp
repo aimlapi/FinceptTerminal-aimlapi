@@ -11,9 +11,13 @@
 namespace fincept::ai_chat {
 
 const QStringList& ProviderCatalog::known_providers() {
-    static const QStringList kProviders = {"openai",     "anthropic", "gemini",       "groq",     "deepseek",
-                                           "openrouter", "minimax",   "kimi",         "ollama",   "xai",
-                                           "fincept",    "astraflow", "astraflow_cn", "aihubmix", "aimlapi"};
+    // Hand-ordered. This is the only provider list in the repo that is not sorted
+    // for display: LlmConfigSection::providers_sorted() and the Alpha Arena wizard
+    // both re-sort by display name, so what this order actually controls is
+    // registry insertion order in ArenaModelRegistry's catalogue-browse pass.
+    static const QStringList kProviders = {"aimlapi",  "openai",     "anthropic", "gemini",       "groq",
+                                           "deepseek", "openrouter", "minimax",   "kimi",         "ollama",
+                                           "xai",      "fincept",    "astraflow", "astraflow_cn", "aihubmix"};
     return kProviders;
 }
 
