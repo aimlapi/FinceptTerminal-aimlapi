@@ -1,6 +1,16 @@
 > [!IMPORTANT]
-> **Two editions.** **[Enterprise](https://fincept.in/enterprise)** is the private, closed-source build for funds and research desks — 41 modules, private data, live broker routing, SSO, from **$99/user/month**. **This repo** is the free AGPL-3.0 edition for learning and academic use, one release a month.
-> [Compare](https://fincept.in/comparison) · [Pricing](https://fincept.in/pricing)
+> ## 🔒 Fincept Terminal **Enterprise** — the private edition. Launch price: **90% off, ends soon.**
+> Proprietary real-time data · Multi-agent AI research · Live broker & algo execution · Priority support
+>
+> | Plan | Was | **Launch price** |
+> |:--|:--:|:--:|
+> | **Exclusive** | ~~$99~~ | **$10** /user/mo |
+> | **Exclusive+** ⭐ Most popular | ~~$199~~ | **$20** /user/mo |
+> | **Exclusive Pro** | ~~$299~~ | **$40** /user/mo |
+>
+> [![Claim launch price](https://img.shields.io/badge/%F0%9F%94%A5_Claim_launch_price_%E2%86%92-C06524?style=for-the-badge)](https://fincept.in/enterprise/signup) &nbsp; [![Compare plans](https://img.shields.io/badge/Compare_plans-1F2328?style=for-the-badge)](https://fincept.in/pricing)
+>
+> <sub>Early seats locked in at launch price for life · No annual lock-in, cancel anytime · This open-source repo stays free under AGPL-3.0</sub>
 
 # Fincept Terminal
 
@@ -56,7 +66,7 @@ Use the open build if you're a student, hobbyist or academic. Use Enterprise if 
 | | Open Source | **Enterprise** |
 |---|---|---|
 | **Licence** | AGPL-3.0 — strong copyleft | Proprietary — no copyleft to manage |
-| **Cost** | Free, plus your own data and LLM bills | $99 / $199 / $299 per user/month |
+| **Cost** | Free, plus your own data and LLM bills | ~~$99 / $199 / $299~~ **$10 / $20 / $40** per user/month — launch pricing |
 | **Data** | Free public feeds, your own API keys | Private datasets, deeper history, point-in-time |
 | **AI** | Bring your own LLM key | 400–5,000 credits included · multi-agent research · private dataroom |
 | **Trading** | Paper trading + broker integrations | Live broker routing + live algo deployment |
@@ -72,12 +82,12 @@ Use the open build if you're a student, hobbyist or academic. Use Enterprise if 
 
 | | **Exclusive** | **Exclusive+** ★ | **Exclusive Pro** |
 |---|---|---|---|
-| | **$99**/user/mo | **$199**/user/mo | **$299**/user/mo |
+| | ~~$99~~ **$10**/user/mo | ~~$199~~ **$20**/user/mo | ~~$299~~ **$40**/user/mo |
 | AI credits / month | 400 | 2,000 | 5,000 |
 | Deep research + agent teams | — | ✓ | ✓ |
 | Live broker trading + algo | — | — | ✓ |
 
-Monthly billing, no lock-in, no seat minimum, 15% off quarterly — **$1,188–$3,588 per user per year**, against roughly $27,000 for a Bloomberg seat. **Universities:** 5 Exclusive Pro seats for **$699/month**. These plans are the whole price list: no negotiated pricing, no separate commercial licence.
+Monthly billing, no lock-in, no seat minimum, 10% off quarterly — at launch pricing that is **$120–$480 per user per year**, against roughly $27,000 for a Bloomberg seat. **Universities:** 5 Exclusive Pro seats for **$699/month**. These plans are the whole price list: no negotiated pricing, no separate commercial licence.
 
 Enterprise needs its own account — free Fincept logins don't sign in to it.
 

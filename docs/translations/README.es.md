@@ -1,6 +1,16 @@
 > [!IMPORTANT]
-> **Dos ediciones.** **[Enterprise](https://fincept.in/enterprise)** es la versión privada y de código cerrado para fondos y mesas de análisis — 41 módulos, datos privados, enrutamiento en vivo a brókers, SSO, desde **99 $/usuario/mes**. **Este repositorio** es la edición libre AGPL-3.0 para aprendizaje y uso académico, con una versión al mes.
-> [Comparativa](https://fincept.in/comparison) · [Precios](https://fincept.in/pricing)
+> ## 🔒 Fincept Terminal **Enterprise** — la edición privada. Precio de lanzamiento: **90 % de descuento, por tiempo limitado.**
+> Datos propios en tiempo real · Investigación con IA multiagente · Ejecución con bróker y algos en vivo · Soporte prioritario
+>
+> | Plan | Antes | **Precio de lanzamiento** |
+> |:--|:--:|:--:|
+> | **Exclusive** | ~~99 $~~ | **10 $** /usuario/mes |
+> | **Exclusive+** ⭐ El más popular | ~~199 $~~ | **20 $** /usuario/mes |
+> | **Exclusive Pro** | ~~299 $~~ | **40 $** /usuario/mes |
+>
+> [![🔥 Conseguir el precio de lanzamiento →](https://img.shields.io/badge/%F0%9F%94%A5_Conseguir_el_precio_de_lanzamiento_%E2%86%92-C06524?style=for-the-badge)](https://fincept.in/enterprise/signup) &nbsp; [![Comparar planes](https://img.shields.io/badge/Comparar_planes-1F2328?style=for-the-badge)](https://fincept.in/pricing)
+>
+> <sub>Las primeras licencias conservan el precio de lanzamiento de por vida · Sin permanencia anual, cancela cuando quieras · Este repositorio de código abierto sigue siendo gratuito bajo AGPL-3.0</sub>
 
 # Fincept Terminal
 
@@ -34,7 +44,7 @@ Usa la edición abierta si eres estudiante, aficionado o académico. Usa Enterpr
 | | Código abierto | **Enterprise** |
 |---|---|---|
 | **Licencia** | AGPL-3.0 — copyleft fuerte | Propietaria — sin obligaciones de copyleft |
-| **Coste** | Gratis, más tus facturas de datos y LLM | 99 $ / 199 $ / 299 $ por usuario/mes |
+| **Coste** | Gratis, más tus facturas de datos y LLM | ~~99 $ / 199 $ / 299 $~~ **10 $ / 20 $ / 40 $** por usuario/mes — precio de lanzamiento |
 | **Datos** | Fuentes públicas gratuitas, tus propias claves | Conjuntos de datos privados, más histórico, point-in-time |
 | **IA** | Tu propia clave de LLM | 400–5.000 créditos incluidos · investigación multiagente · sala de datos privada |
 | **Trading** | Papel + integraciones de bróker | Enrutamiento en vivo a brókers + despliegue de algos en vivo |
@@ -50,12 +60,12 @@ Usa la edición abierta si eres estudiante, aficionado o académico. Usa Enterpr
 
 | | **Exclusive** | **Exclusive+** ★ | **Exclusive Pro** |
 |---|---|---|---|
-| | **99 $**/usuario/mes | **199 $**/usuario/mes | **299 $**/usuario/mes |
+| | ~~99 $~~ **10 $**/usuario/mes | ~~199 $~~ **20 $**/usuario/mes | ~~299 $~~ **40 $**/usuario/mes |
 | Créditos de IA / mes | 400 | 2.000 | 5.000 |
 | Deep research + equipos de agentes | — | ✓ | ✓ |
 | Trading en vivo + algos | — | — | ✓ |
 
-Facturación mensual, sin permanencia, sin mínimo de licencias, 15 % de descuento trimestral — **1.188–3.588 $ por usuario y año**, frente a unos 27.000 $ de una licencia Bloomberg. **Universidades:** 5 licencias Exclusive Pro por **699 $/mes**. Estos planes son la lista de precios completa: sin precios negociados y sin licencia comercial aparte.
+Facturación mensual, sin permanencia, sin mínimo de licencias, 10 % de descuento trimestral — con el precio de lanzamiento son **120–480 $ por usuario y año**, frente a unos 27.000 $ de una licencia Bloomberg. **Universidades:** 5 licencias Exclusive Pro por **699 $/mes**. Estos planes son la lista de precios completa: sin precios negociados y sin licencia comercial aparte.
 
 Enterprise necesita su propia cuenta — las cuentas gratuitas de Fincept no sirven para entrar.
 
