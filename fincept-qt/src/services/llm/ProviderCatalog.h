@@ -5,6 +5,7 @@
 // (LlmConfigSection) and the Alpha Arena model registry. Data moved verbatim
 // from LlmConfigSection.cpp (2026-06-10); update HERE when adding a provider.
 
+#include <QMap>
 #include <QString>
 #include <QStringList>
 
@@ -25,6 +26,12 @@ class ProviderCatalog {
     static bool is_openai_compatible(const QString& provider); // everything except anthropic/gemini/fincept
     /// Brand color used for arena agent identity (hex, e.g. "#10A37F").
     static QString brand_color(const QString& provider);
+    /// Extra request headers a provider wants for call attribution (the same job the
+    /// hardcoded HTTP-Referer/X-Title pair does for OpenRouter). Empty for every
+    /// provider that has none, and empty when base_url points somewhere other than the
+    /// provider's own host, so attribution can never ride a request to a third party.
+    /// Returns a fresh map per call — merge it, do not assign over caller headers.
+    static QMap<QString, QString> attribution_headers(const QString& provider, const QString& base_url = {});
     /// Full chat-completions endpoint. Mirrors LlmService::get_endpoint_url rules:
     /// custom base_url wins (appends /v1 + suffix unless already versioned/full);
     /// fincept is handled by the CALLER (needs AppConfig) — returns empty for it.

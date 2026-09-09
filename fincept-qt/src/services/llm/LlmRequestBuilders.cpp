@@ -24,6 +24,11 @@ void LlmService::apply_openai_token_limit(QJsonObject& body) const {
     // parameter: 'max_tokens' ... Use 'max_completion_tokens' instead").
     // Non-OpenAI models (claude/gemini/deepseek/qwen/…) keep max_tokens.
     //
+    // aimlapi.com is deliberately NOT in this list even though it also fronts the
+    // gpt-5/o-series: it translates the parameter itself. Verified live —
+    // openai/gpt-5-5 with max_tokens returns 200 (model echo gpt-5.5-2026-04-23),
+    // so adding it here would swap in a parameter it does not need.
+    //
     // Centralised because the tool-loop follow-ups did NOT do this and sent
     // max_tokens unconditionally: on a reasoning model the opening turn was
     // built correctly and every follow-up 400'd, so the model would call one
