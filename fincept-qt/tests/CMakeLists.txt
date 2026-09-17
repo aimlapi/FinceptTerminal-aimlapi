@@ -23,7 +23,7 @@
 # signal about the unit, not about this file: extract the pure logic into a small
 # header (or a leaf .cpp) and test that. Do not grow the link line.
 #
-# Current cost of the whole suite: 3 executables, 5 translation units.
+# Current cost of the whole suite: 4 executables, 7 translation units.
 # ─────────────────────────────────────────────────────────────────────────────
 
 # Qt Test ships with every Qt installation, so this adds no new dependency.
@@ -119,4 +119,11 @@ fincept_add_test(tst_order_validator
     tst_order_validator.cpp
     "${PROJECT_SOURCE_DIR}/src/trading/OrderValidator.cpp")
 
-message(STATUS "Fincept tests: tst_broker_modify_fields, tst_result, tst_order_validator")
+# src/services/llm/ProviderCatalog.{h,cpp} — pure Qt Core (QHash/QString/QUrl/
+# QRegularExpression). Its .cpp includes only its own header, so this is one extra
+# TU with no service, network or repository linkage.
+fincept_add_test(tst_provider_catalog
+    tst_provider_catalog.cpp
+    "${PROJECT_SOURCE_DIR}/src/services/llm/ProviderCatalog.cpp")
+
+message(STATUS "Fincept tests: tst_broker_modify_fields, tst_result, tst_order_validator, tst_provider_catalog")
