@@ -5,8 +5,8 @@
 > | 플랜 | 정가 | **런칭 가격** |
 > |:--|:--:|:--:|
 > | **Exclusive** | ~~99달러~~ | **10달러** /사용자/월 |
-> | **Exclusive+** ⭐ 가장 인기 | ~~199달러~~ | **20달러** /사용자/월 |
-> | **Exclusive Pro** | ~~299달러~~ | **40달러** /사용자/월 |
+> | **Exclusive+** | ~~199달러~~ | **20달러** /사용자/월 |
+> | **Exclusive Pro** ⭐ 가장 인기 | ~~299달러~~ | **40달러** /사용자/월 |
 >
 > [![🔥 런칭 가격으로 시작 →](https://img.shields.io/badge/%F0%9F%94%A5_%EB%9F%B0%EC%B9%AD_%EA%B0%80%EA%B2%A9%EC%9C%BC%EB%A1%9C_%EC%8B%9C%EC%9E%91_%E2%86%92-C06524?style=for-the-badge)](https://fincept.in/enterprise/signup) &nbsp; [![플랜 비교](https://img.shields.io/badge/%ED%94%8C%EB%9E%9C_%EB%B9%84%EA%B5%90-1F2328?style=for-the-badge)](https://fincept.in/pricing)
 >
@@ -58,7 +58,7 @@
 
 여섯 개 데스크에 걸친 41개 모듈 — 에이전트 리서치, 퀀트 랩과 백테스팅, 심층 펀더멘털 리서치, 마켓과 실행, 매크로와 글로벌 인텔리전스, 그리고 나만의 워크스페이스. 모두 [700쪽 매뉴얼](https://fincept.in/manual)에 정리되어 있습니다.
 
-| | **Exclusive** | **Exclusive+** ★ | **Exclusive Pro** |
+| | **Exclusive** | **Exclusive+** | **Exclusive Pro** ★ |
 |---|---|---|---|
 | | ~~99달러~~ **월 10달러**/사용자 | ~~199달러~~ **월 20달러**/사용자 | ~~299달러~~ **월 40달러**/사용자 |
 | AI 크레딧 / 월 | 400 | 2,000 | 5,000 |
@@ -115,7 +115,7 @@ Enterprise는 별도 계정이 필요합니다 — 무료 Fincept 계정으로�
 ## Fincept의 다른 제품
 
 - **[Fincept Data API](https://docs.fincept.in)** — 500개 이상 REST 엔드포인트, 423,000개 이상 종목, 2,000개 이상 소스. 모든 계정에 무료 등급 포함.
-- **[Quantcept](https://quantcept.io)** — 오픈소스 AI 기반 커맨드라인 금융 터미널(Apache-2.0).
+- **[Quantcept](https://quantcept.io)** — 시장용 AI 리서치 데스크: 일차 데이터, 백테스트, 포트폴리오, 문서, 24시간 모니터. 무료로 시작. Alpha 14달러 / Apex 24달러(30일).
 
 ---
 

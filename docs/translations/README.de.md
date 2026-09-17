@@ -5,8 +5,8 @@
 > | Plan | Statt | **Launch-Preis** |
 > |:--|:--:|:--:|
 > | **Exclusive** | ~~99 $~~ | **10 $** /Nutzer/Mon. |
-> | **Exclusive+** ⭐ Am beliebtesten | ~~199 $~~ | **20 $** /Nutzer/Mon. |
-> | **Exclusive Pro** | ~~299 $~~ | **40 $** /Nutzer/Mon. |
+> | **Exclusive+** | ~~199 $~~ | **20 $** /Nutzer/Mon. |
+> | **Exclusive Pro** ⭐ Am beliebtesten | ~~299 $~~ | **40 $** /Nutzer/Mon. |
 >
 > [![🔥 Launch-Preis sichern →](https://img.shields.io/badge/%F0%9F%94%A5_Launch--Preis_sichern_%E2%86%92-C06524?style=for-the-badge)](https://fincept.in/enterprise/signup) &nbsp; [![Pläne vergleichen](https://img.shields.io/badge/Pl%C3%A4ne_vergleichen-1F2328?style=for-the-badge)](https://fincept.in/pricing)
 >
@@ -58,7 +58,7 @@ Nutzen Sie den offenen Build, wenn Sie Studierende, Hobbyist oder akademisch tä
 
 41 Module über sechs Desks — Agentic Research, Quant Lab und Backtesting, Deep Fundamental Research, Markets and Execution, Macro and Global Intelligence sowie Ihr eigener Workspace. Alles dokumentiert in einem [700-seitigen Handbuch](https://fincept.in/manual).
 
-| | **Exclusive** | **Exclusive+** ★ | **Exclusive Pro** |
+| | **Exclusive** | **Exclusive+** | **Exclusive Pro** ★ |
 |---|---|---|---|
 | | ~~99 $~~ **10 $**/Nutzer/Monat | ~~199 $~~ **20 $**/Nutzer/Monat | ~~299 $~~ **40 $**/Nutzer/Monat |
 | KI-Credits / Monat | 400 | 2.000 | 5.000 |
@@ -115,7 +115,7 @@ Neue Datenkonnektoren, KI-Agenten, Analysemodule, C++-Screens und Dokumentation 
 ## Ebenfalls von Fincept
 
 - **[Fincept Data API](https://docs.fincept.in)** — über 500 REST-Endpunkte, mehr als 423.000 Instrumente, über 2.000 Quellen. Kostenlose Stufe zu jedem Konto.
-- **[Quantcept](https://quantcept.io)** — quelloffenes, KI-gestütztes Finanz-Terminal für die Kommandozeile (Apache-2.0).
+- **[Quantcept](https://quantcept.io)** — KI-Research-Desk für Märkte: Primärdaten, Backtests, Portfolios, Dokumente und 24/7-Monitore. Kostenlos starten; Alpha 14 $ / Apex 24 $ pro 30 Tage.
 
 ---
 

@@ -5,8 +5,8 @@
 > | 方案 | 原價 | **上線特價** |
 > |:--|:--:|:--:|
 > | **Exclusive** | ~~99 美元~~ | **10 美元** /使用者/月 |
-> | **Exclusive+** ⭐ 最受歡迎 | ~~199 美元~~ | **20 美元** /使用者/月 |
-> | **Exclusive Pro** | ~~299 美元~~ | **40 美元** /使用者/月 |
+> | **Exclusive+** | ~~199 美元~~ | **20 美元** /使用者/月 |
+> | **Exclusive Pro** ⭐ 最受歡迎 | ~~299 美元~~ | **40 美元** /使用者/月 |
 >
 > [![🔥 鎖定上線特價 →](https://img.shields.io/badge/%F0%9F%94%A5_%E9%8E%96%E5%AE%9A%E4%B8%8A%E7%B7%9A%E7%89%B9%E5%83%B9_%E2%86%92-C06524?style=for-the-badge)](https://fincept.in/enterprise/signup) &nbsp; [![比較方案](https://img.shields.io/badge/%E6%AF%94%E8%BC%83%E6%96%B9%E6%A1%88-1F2328?style=for-the-badge)](https://fincept.in/pricing)
 >
@@ -58,7 +58,7 @@
 
 六大業務台、41 個模組 —— 代理研究、量化實驗室與回測、深度基本面研究、市場與執行、總體與全球情報，以及你的專屬工作區。全部收錄於一本 [700 頁手冊](https://fincept.in/manual)。
 
-| | **Exclusive** | **Exclusive+** ★ | **Exclusive Pro** |
+| | **Exclusive** | **Exclusive+** | **Exclusive Pro** ★ |
 |---|---|---|---|
 | | ~~99 美元~~ **10 美元**/使用者/月 | ~~199 美元~~ **20 美元**/使用者/月 | ~~299 美元~~ **40 美元**/使用者/月 |
 | AI 點數 / 月 | 400 | 2,000 | 5,000 |
@@ -115,7 +115,7 @@ Enterprise 需要獨立帳號 —— 免費 Fincept 帳號無法登入。
 ## Fincept 的其他產品
 
 - **[Fincept Data API](https://docs.fincept.in)** —— 500 多個 REST 端點、423,000 多檔標的、2,000 多個資料來源。任何帳號皆含免費額度。
-- **[Quantcept](https://quantcept.io)** —— 開源的 AI 驅動命令列金融終端機（Apache-2.0）。
+- **[Quantcept](https://quantcept.io)** —— 面向市場的 AI 研究工作台：一手資料、回測、投資組合、文件與全天候監控。免費起步；Alpha 14 美元 / Apex 24 美元（30 天）。
 
 ---
 

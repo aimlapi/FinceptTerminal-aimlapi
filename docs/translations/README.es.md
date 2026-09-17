@@ -5,8 +5,8 @@
 > | Plan | Antes | **Precio de lanzamiento** |
 > |:--|:--:|:--:|
 > | **Exclusive** | ~~99 $~~ | **10 $** /usuario/mes |
-> | **Exclusive+** ⭐ El más popular | ~~199 $~~ | **20 $** /usuario/mes |
-> | **Exclusive Pro** | ~~299 $~~ | **40 $** /usuario/mes |
+> | **Exclusive+** | ~~199 $~~ | **20 $** /usuario/mes |
+> | **Exclusive Pro** ⭐ El más popular | ~~299 $~~ | **40 $** /usuario/mes |
 >
 > [![🔥 Conseguir el precio de lanzamiento →](https://img.shields.io/badge/%F0%9F%94%A5_Conseguir_el_precio_de_lanzamiento_%E2%86%92-C06524?style=for-the-badge)](https://fincept.in/enterprise/signup) &nbsp; [![Comparar planes](https://img.shields.io/badge/Comparar_planes-1F2328?style=for-the-badge)](https://fincept.in/pricing)
 >
@@ -58,7 +58,7 @@ Usa la edición abierta si eres estudiante, aficionado o académico. Usa Enterpr
 
 41 módulos repartidos en seis mesas — investigación agéntica, quant lab y backtesting, análisis fundamental profundo, mercados y ejecución, macro e inteligencia global, y tu propio espacio de trabajo. Todo ello en un [manual de 700 páginas](https://fincept.in/manual).
 
-| | **Exclusive** | **Exclusive+** ★ | **Exclusive Pro** |
+| | **Exclusive** | **Exclusive+** | **Exclusive Pro** ★ |
 |---|---|---|---|
 | | ~~99 $~~ **10 $**/usuario/mes | ~~199 $~~ **20 $**/usuario/mes | ~~299 $~~ **40 $**/usuario/mes |
 | Créditos de IA / mes | 400 | 2.000 | 5.000 |
@@ -115,7 +115,7 @@ Nuevos conectores de datos, agentes de IA, módulos de analítica, pantallas C++
 ## También de Fincept
 
 - **[Fincept Data API](https://docs.fincept.in)** — más de 500 endpoints REST, más de 423.000 instrumentos, más de 2.000 fuentes. Capa gratuita incluida con cualquier cuenta.
-- **[Quantcept](https://quantcept.io)** — terminal financiero de línea de comandos, de código abierto y con IA (Apache-2.0).
+- **[Quantcept](https://quantcept.io)** — mesa de investigación con IA para mercados: datos primarios, backtests, carteras, documentos y monitores 24/7. Empieza gratis; Alpha 14 $ / Apex 24 $ por 30 días.
 
 ---
 

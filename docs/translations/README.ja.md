@@ -5,8 +5,8 @@
 > | プラン | 通常 | **ローンチ価格** |
 > |:--|:--:|:--:|
 > | **Exclusive** | ~~99 ドル~~ | **10 ドル** /ユーザー/月 |
-> | **Exclusive+** ⭐ 人気No.1 | ~~199 ドル~~ | **20 ドル** /ユーザー/月 |
-> | **Exclusive Pro** | ~~299 ドル~~ | **40 ドル** /ユーザー/月 |
+> | **Exclusive+** | ~~199 ドル~~ | **20 ドル** /ユーザー/月 |
+> | **Exclusive Pro** ⭐ 人気No.1 | ~~299 ドル~~ | **40 ドル** /ユーザー/月 |
 >
 > [![🔥 ローンチ価格で申し込む →](https://img.shields.io/badge/%F0%9F%94%A5_%E3%83%AD%E3%83%BC%E3%83%B3%E3%83%81%E4%BE%A1%E6%A0%BC%E3%81%A7%E7%94%B3%E3%81%97%E8%BE%BC%E3%82%80_%E2%86%92-C06524?style=for-the-badge)](https://fincept.in/enterprise/signup) &nbsp; [![プランを比較](https://img.shields.io/badge/%E3%83%97%E3%83%A9%E3%83%B3%E3%82%92%E6%AF%94%E8%BC%83-1F2328?style=for-the-badge)](https://fincept.in/pricing)
 >
@@ -58,7 +58,7 @@
 
 6 つのデスクにまたがる 41 モジュール — エージェンティック・リサーチ、クオンツラボとバックテスト、詳細なファンダメンタル分析、マーケットと執行、マクロとグローバル・インテリジェンス、そして自分専用のワークスペース。すべて [700 ページのマニュアル](https://fincept.in/manual)に収録されています。
 
-| | **Exclusive** | **Exclusive+** ★ | **Exclusive Pro** |
+| | **Exclusive** | **Exclusive+** | **Exclusive Pro** ★ |
 |---|---|---|---|
 | | ~~99 ドル~~ **月額 10 ドル**／ユーザー | ~~199 ドル~~ **月額 20 ドル**／ユーザー | ~~299 ドル~~ **月額 40 ドル**／ユーザー |
 | AI クレジット／月 | 400 | 2,000 | 5,000 |
@@ -115,7 +115,7 @@ Enterprise には専用アカウントが必要です。無償の Fincept アカ
 ## Fincept の他のプロダクト
 
 - **[Fincept Data API](https://docs.fincept.in)** — 500 以上の REST エンドポイント、423,000 以上の銘柄、2,000 以上のソース。どのアカウントにも無償枠が付属します。
-- **[Quantcept](https://quantcept.io)** — オープンソースの AI 搭載コマンドライン金融ターミナル（Apache-2.0）。
+- **[Quantcept](https://quantcept.io)** — 市場向け AI リサーチデスク。一次データ、バックテスト、ポートフォリオ、ドキュメント、24時間監視。無料で開始。Alpha 14ドル / Apex 24ドル（30日）。
 
 ---
 

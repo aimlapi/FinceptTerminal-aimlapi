@@ -5,8 +5,8 @@
 > | Offre | Avant | **Prix de lancement** |
 > |:--|:--:|:--:|
 > | **Exclusive** | ~~99 $~~ | **10 $** /utilisateur/mois |
-> | **Exclusive+** ⭐ La plus choisie | ~~199 $~~ | **20 $** /utilisateur/mois |
-> | **Exclusive Pro** | ~~299 $~~ | **40 $** /utilisateur/mois |
+> | **Exclusive+** | ~~199 $~~ | **20 $** /utilisateur/mois |
+> | **Exclusive Pro** ⭐ La plus choisie | ~~299 $~~ | **40 $** /utilisateur/mois |
 >
 > [![🔥 Profiter du prix de lancement →](https://img.shields.io/badge/%F0%9F%94%A5_Profiter_du_prix_de_lancement_%E2%86%92-C06524?style=for-the-badge)](https://fincept.in/enterprise/signup) &nbsp; [![Comparer les offres](https://img.shields.io/badge/Comparer_les_offres-1F2328?style=for-the-badge)](https://fincept.in/pricing)
 >
@@ -58,7 +58,7 @@ Prenez l'édition ouverte si vous êtes étudiant, amateur ou universitaire. Pre
 
 41 modules répartis sur six desks — recherche agentique, quant lab et backtesting, analyse fondamentale approfondie, marchés et exécution, macro et intelligence globale, et votre propre espace de travail. Le tout dans un [manuel de 700 pages](https://fincept.in/manual).
 
-| | **Exclusive** | **Exclusive+** ★ | **Exclusive Pro** |
+| | **Exclusive** | **Exclusive+** | **Exclusive Pro** ★ |
 |---|---|---|---|
 | | ~~99 $~~ **10 $**/utilisateur/mois | ~~199 $~~ **20 $**/utilisateur/mois | ~~299 $~~ **40 $**/utilisateur/mois |
 | Crédits IA / mois | 400 | 2 000 | 5 000 |
@@ -115,7 +115,7 @@ Nouveaux connecteurs de données, agents IA, modules d'analyse, écrans C++ et d
 ## Également chez Fincept
 
 - **[Fincept Data API](https://docs.fincept.in)** — plus de 500 endpoints REST, plus de 423 000 instruments, plus de 2 000 sources. Palier gratuit inclus avec tout compte.
-- **[Quantcept](https://quantcept.io)** — terminal financier en ligne de commande, open source et propulsé par l'IA (Apache-2.0).
+- **[Quantcept](https://quantcept.io)** — desk de recherche IA pour les marchés : données primaires, backtests, portefeuilles, documents et moniteurs 24h/24. Démarrez gratuitement ; Alpha 14 $ / Apex 24 $ par 30 jours.
 
 ---
 

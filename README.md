@@ -5,12 +5,28 @@
 > | Plan | Was | **Launch price** |
 > |:--|:--:|:--:|
 > | **Exclusive** | ~~$99~~ | **$10** /user/mo |
-> | **Exclusive+** ⭐ Most popular | ~~$199~~ | **$20** /user/mo |
-> | **Exclusive Pro** | ~~$299~~ | **$40** /user/mo |
+> | **Exclusive+** | ~~$199~~ | **$20** /user/mo |
+> | **Exclusive Pro** ⭐ Most popular | ~~$299~~ | **$40** /user/mo |
 >
 > [![Claim launch price](https://img.shields.io/badge/%F0%9F%94%A5_Claim_launch_price_%E2%86%92-C06524?style=for-the-badge)](https://fincept.in/enterprise/signup) &nbsp; [![Compare plans](https://img.shields.io/badge/Compare_plans-1F2328?style=for-the-badge)](https://fincept.in/pricing)
 >
 > <sub>Early seats locked in at launch price for life · No annual lock-in, cancel anytime · This open-source repo stays free under AGPL-3.0</sub>
+
+
+> [!TIP]
+> ## Quantcept — the AI research desk that never closes.
+> Markets · Backtests · Portfolios · Documents · Watchlists · Memory — 30+ primary data sources, running around the clock.
+>
+> | Plan | Price |
+> |:--|:--:|
+> | **Free** | **$0** · 350 credits, no card |
+> | **Alpha** | **$14** / 30 days |
+> | **Apex** | **$24** / 30 days |
+>
+> [![Start free](https://img.shields.io/badge/Start_free_%E2%86%92-0E7490?style=for-the-badge)](https://quantcept.io/register) &nbsp; [![See the desk](https://img.shields.io/badge/See_the_desk-1F2328?style=for-the-badge)](https://quantcept.io)
+>
+> <sub>30-day passes — nothing auto-renews · Students: Alpha for $10 · Free to start at [quantcept.io](https://quantcept.io)</sub>
+
 
 # Fincept Terminal
 
@@ -36,7 +52,7 @@
 
 State-of-the-art financial intelligence platform with institutional-grade financial analytics, AI automation, and unlimited data connectivity.
 
-[📥 Download](https://github.com/Fincept-Corporation/FinceptTerminal/releases) · [🏢 Enterprise](https://fincept.in/enterprise) · [💳 Pricing](https://fincept.in/pricing) · [📖 Manual](https://fincept.in/manual) · [💬 Discussions](https://github.com/Fincept-Corporation/FinceptTerminal/discussions) · [💬 Discord](https://discord.gg/ae87a8ygbN)
+[📥 Download](https://github.com/Fincept-Corporation/FinceptTerminal/releases) · [🏢 Enterprise](https://fincept.in/enterprise) · [💳 Pricing](https://fincept.in/pricing) · [📖 Manual](https://fincept.in/manual) · [💬 Discussions](https://github.com/Fincept-Corporation/FinceptTerminal/discussions) · [💬 Discord](https://discord.gg/ae87a8ygbN) · [📈 Quantcept](https://quantcept.io)
 
 <sub>English · [Deutsch](docs/translations/README.de.md) · [Español](docs/translations/README.es.md) · [Français](docs/translations/README.fr.md) · [हिन्दी](docs/translations/README.hi.md) · [日本語](docs/translations/README.ja.md) · [한국어](docs/translations/README.ko.md) · [简体中文](docs/translations/README.zh-CN.md) · [繁體中文](docs/translations/README.zh-TW.md)</sub>
 
@@ -80,7 +96,7 @@ Use the open build if you're a student, hobbyist or academic. Use Enterprise if 
 
 41 modules across six desks — agentic research, quant lab and backtesting, deep fundamental research, markets and execution, macro and global intelligence, and your own workspace. All of it in a [700-page manual](https://fincept.in/manual).
 
-| | **Exclusive** | **Exclusive+** ★ | **Exclusive Pro** |
+| | **Exclusive** | **Exclusive+** | **Exclusive Pro** ★ |
 |---|---|---|---|
 | | ~~$99~~ **$10**/user/mo | ~~$199~~ **$20**/user/mo | ~~$299~~ **$40**/user/mo |
 | AI credits / month | 400 | 2,000 | 5,000 |
@@ -147,7 +163,7 @@ New data connectors, AI agents, analytics modules, C++ screens and documentation
 ## Also from Fincept
 
 - **[Fincept Data API](https://docs.fincept.in)** — 500+ REST endpoints, 423,000+ instruments, 2,000+ sources. Free tier included with any account.
-- **[Quantcept](https://quantcept.io)** — open-source, AI-powered command-line finance terminal (Apache-2.0).
+- **[Quantcept](https://quantcept.io)** — AI research desk for markets: primary data, backtests, portfolios, documents and 24/7 monitors. Free to start; Alpha $14 / Apex $24 per 30 days.
 
 ---
 
