@@ -159,6 +159,15 @@ const CatalogEntry kCatalog[] = {
     // (user max_tokens still applies).
     {"aihubmix", "*", kNoPublishedCap},
 
+    // ── aimlapi.com (OpenAI-compatible aggregator) ─────────────────────────
+    // https://docs.aimlapi.com — routes 353 chat models; the per-model cap is the
+    // upstream model's and is not derivable from the id, so use the generous
+    // default. Note max_tokens is a REQUEST cap, not a spend cap here: on some
+    // reasoning models the billed reasoning tokens run well past the value and the
+    // response still reports finish_reason "stop", i.e. no signal at all. Do not
+    // present this control to the user as a cost ceiling.
+    {"aimlapi", "*", kNoPublishedCap},
+
     // ── Fincept (proxies upstream) ──────────────────────────────────────
     // Fincept's /research/llm/async wraps various upstream models. We
     // don't know which one is selected server-side, so go with a generous

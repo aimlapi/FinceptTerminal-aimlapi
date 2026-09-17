@@ -392,6 +392,14 @@ QMap<QString, QString> LlmService::get_headers() const {
             h["HTTP-Referer"] = "https://fincept.in";
             h["X-Title"] = "Fincept Terminal";
         }
+        // Same idea, table-driven: a provider that publishes attribution headers
+        // gets them merged in, never assigned over what is already here, and only
+        // when base_url still resolves to that provider's own host.
+        const QMap<QString, QString> attribution = ProviderCatalog::attribution_headers(p, base_url_);
+        for (auto it = attribution.constBegin(); it != attribution.constEnd(); ++it) {
+            if (!h.contains(it.key()))
+                h.insert(it.key(), it.value());
+        }
     }
     return h;
 }
